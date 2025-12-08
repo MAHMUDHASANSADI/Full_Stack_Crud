@@ -11,7 +11,7 @@ const routes = [
     {
         path: '/tasks',
         component: Tasks,
-        meta: { requiresAuth: true } // 🔒 Protected route
+        meta: { requiresAuth: true }
     },
 ]
 
@@ -20,14 +20,13 @@ const router = createRouter({
     routes
 })
 
-// Navigation guard
 router.beforeEach((to, from, next) => {
     const auth = useAuthStore()
 
     if (to.meta.requiresAuth && !auth.isAuthenticated) {
-        next('/login') // redirect to login if not authenticated
+        next('/login')
     } else {
-        next() // allow navigation
+        next()
     }
 })
 
