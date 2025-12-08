@@ -80,6 +80,7 @@ import { ref, onMounted } from "vue";
 import api from "../api";
 import { useAuthStore } from "../stores/auth";
 import { useRouter } from "vue-router";
+import '../assets/css/task.css';
 
 const auth = useAuthStore();
 const router = useRouter();
@@ -151,110 +152,3 @@ onMounted(() => {
 });
 </script>
 
-<style>
-.mt-5 {
-  margin-top: 5px;
-}
-
-select {
-  padding: 5px;
-  border-radius: 4px;
-}
-
-.yes {
-  color: green;
-  font-weight: bold;
-}
-.no {
-  color: red;
-  font-weight: bold;
-}
-
-.btn-edit {
-  background: #007bff;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 4px;
-  margin-right: 5px;
-  border: none;
-  cursor: pointer;
-}
-
-.btn-delete {
-  background: #8b0000;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 4px;
-  border: none;
-  cursor: pointer;
-  margin-top: 2px;
-}
-
-.btn-edit:hover {
-  opacity: 0.8;
-}
-
-.btn-delete:hover {
-  opacity: 0.8;
-}
-
-.top-buttons {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.add-btn,
-.logout-btn {
-  padding: 10px 20px;
-  border-radius: 5px;
-  color: white;
-}
-
-.add-btn {
-  background: green;
-}
-
-.logout-btn {
-  background: red;
-}
-
-.task-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-}
-
-.task-table th,
-.task-table td {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: left;
-}
-
-.task-table th {
-  background: #f7f7f7;
-}
-.modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal {
-  background: white;
-  padding: 20px;
-  width: 320px;
-  border-radius: 10px;
-}
-
-.modal-actions {
-  margin-top: 10px;
-  display: flex;
-  justify-content: space-between;
-}
-</style>
