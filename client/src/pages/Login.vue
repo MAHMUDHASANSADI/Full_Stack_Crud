@@ -19,6 +19,7 @@
 import { reactive } from "vue";
 import { useAuthStore } from "../stores/auth";
 import { useRouter } from "vue-router";
+import '../assets/css/login.css';
 
 const router = useRouter();
 const auth = useAuthStore();
